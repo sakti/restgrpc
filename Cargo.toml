@@ -1,0 +1,19 @@
+[package]
+name = "restgrpc"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.52"
+axum = "0.4.3"
+clap = {version="3.0.0", features=["derive"]}
+hyper = {version="0.14", features = ["full"]}
+prost = "0.9.0"
+tokio = {version ="1", features = ["full"] }
+tonic = {version="0.6.2", features = ["tls", "tls-roots", "prost"]}
+tower = {version="0.4.11",  features = ["full"]}
+
+[build-dependencies]
+tonic-build = {version="0.6.2", features=["prost"]}
